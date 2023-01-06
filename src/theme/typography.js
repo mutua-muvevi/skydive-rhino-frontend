@@ -18,7 +18,8 @@ function responsiveFontSizes({ sm, md, lg }) {
   };
 }
 
-const FONT_PRIMARY = 'Inter, sans-serif';
+
+const FONT_PRIMARY = 'Roboto, sans-serif';
 
 const typography = {
   fontFamily: FONT_PRIMARY,
