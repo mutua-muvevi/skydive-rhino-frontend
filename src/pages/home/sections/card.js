@@ -17,7 +17,7 @@ const HomeCard = ({data}) => {
 	const StyledHomeCard = styled(Box)(({ theme }) => ({
 		height: "50vh",
 		width: "100%",
-		borderRadius: theme.shape.borderRadius,
+		// borderRadius: theme.shape.borderRadius,
 		backgroundImage: `url(${data.image})`,
 		position: "center",
 		backgroundSize: "cover",
@@ -29,7 +29,7 @@ const HomeCard = ({data}) => {
 			<StyledContentStack
 				spacing={3}
 			>
-				<Typography variant="h5" style={{color: theme.palette.primary.darker}} gutterBottom>
+				<Typography variant="h5" gutterBottom>
 					{data.title}
 				</Typography>
 				<Stack

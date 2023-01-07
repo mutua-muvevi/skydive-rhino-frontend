@@ -1,6 +1,7 @@
 import { Box, Button, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { useTheme } from "@mui/styles";
+import * as styles from "@mui/styles"
 
 import { socialMediaItems } from "../info";
 
@@ -30,17 +31,17 @@ const HomeDetails = () => {
 		fontSize: "80px",
 		fontWeight: "800",
 		lineHeight : "60%",
-		color:theme.palette.primary.darker
+		// color:theme.palette.primary.darker
 	}
 	
 	const styledSubHeader = {
 		fontSize: "50px",
 		marginLeft: "140px",
-		color: theme.palette.primary.darker
+		// color: theme.palette.primary.darker
 	}
 	
 	const styledParagraph = {
-		color: theme.palette.primary.darker
+		// color: theme.palette.primary.darker
 	}
 
 	return (
@@ -54,6 +55,7 @@ const HomeDetails = () => {
 					<span style={{color:"#fff"}}>
 						fall
 					</span>
+					{console.log(styles)}
 				</Typography>
 			</Box>
 
