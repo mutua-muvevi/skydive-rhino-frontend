@@ -1,6 +1,5 @@
 import { Box, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
-import { useTheme } from "@mui/styles";
 
 import { navItem } from "../info";
 import { NavLink } from "react-router-dom";
@@ -17,7 +16,6 @@ const styledNavItems = {
 }
 
 const HomeNav = () => {
-	const theme = useTheme();
 
 	return (
 		<StyledHomeNav

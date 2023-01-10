@@ -6,6 +6,7 @@ import Homepage from "./pages/home/home";
 import About from "./pages/about/about";
 import Contact from "./pages/contact/contact";
 import Book from "./pages/book/book";
+import LandingLayout from "./layout/layout";
 
 //router function
 const Router = () => {
@@ -15,12 +16,18 @@ const Router = () => {
 			element: <Homepage/>
 		},
 		{
-			path: "/about",
-			element: <About/>
-		},
-		{
-			path: "/contact",
-			element: <Contact/>
+			path: "/landing",
+			element: <LandingLayout/>,
+			children: [
+				{
+					path: "/landing/about",
+					element: <About/>
+				},
+				{
+					path: "/landing/contact",
+					element: <Contact/>
+				},
+			]
 		},
 		{
 			path: "/book",
