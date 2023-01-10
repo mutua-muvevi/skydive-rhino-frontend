@@ -102,7 +102,7 @@ const INITIAL_FORM_STATE = {
 }
 
 const FORM_VALIDATION = Yup.object().shape({
-	password: Yup.string().min(4, 'Minimum characters required is 4'),
+	name: Yup.string().min(4, 'Minimum characters required is 4'),
 	email: Yup.string().email("Please add a valid email").required("Please add an email"),
 })
 
@@ -142,20 +142,19 @@ const Footer = () => {
 								<Grid container spacing={3}>
 									{
 										newsLetterForm.map((el, i) => (
-											<Grid item xs={12} sm={12} md={12} lg={4} xl={4} key={i}>
+											<Grid item xs={12} sm={12} md={4} lg={4} xl={4} key={i}>
 												<TextFieldWrapper
 													color="primary"
 													type={el.type} 
 													name={el.name} 
 													label={el.label}
 													size="medium"
-													required
 												/>
 											</Grid>
 										))
 									}
 
-									<Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
+									<Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
 										<StyledButton fullWidth type="submit" variant="contained" color="primary" endIcon={<FaPaperPlane/>}>
 											<Typography variant="body1">
 												Join now

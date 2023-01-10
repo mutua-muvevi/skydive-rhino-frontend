@@ -2,7 +2,7 @@ import { Box } from "@mui/material";
 import { styled } from "@mui/system";
 
 import Banner from "../../components/ui/banner";
-import Form from "./sections/form";
+import ContactDetailsForm from "./sections/details";
 import Map from "./sections/map";
 
 const StyledContact = styled(Box)(({ theme }) => ({
@@ -17,7 +17,7 @@ const Contact = () => {
 				title="Contact us"
 				subtile="Lorem ipsum"
 			/>
-			<Form/>
+			<ContactDetailsForm/>
 			<Map/>
 		</StyledContact>
 	)

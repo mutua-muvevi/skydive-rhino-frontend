@@ -19,7 +19,7 @@ function responsiveFontSizes({ sm, md, lg }) {
 }
 
 
-const FONT_PRIMARY = 'Roboto, sans-serif';
+const FONT_PRIMARY = 'Monda';
 
 const typography = {
   fontFamily: FONT_PRIMARY,
