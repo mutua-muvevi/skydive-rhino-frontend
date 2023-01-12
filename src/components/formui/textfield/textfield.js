@@ -2,7 +2,7 @@ import { TextField } from "@mui/material";
 import React from 'react';
 import { useField } from "formik";
 
-const TextfieldWrapper = ({name, variant, multiline, size, shrink, ...otherProps}) => {
+const TextFieldWrapper = ({name, variant, multiline, size, shrink, ...otherProps}) => {
 
 	const [field, meta] = useField(name)
 
@@ -30,4 +30,4 @@ const TextfieldWrapper = ({name, variant, multiline, size, shrink, ...otherProps
 	)
 }
 
-export default TextfieldWrapper
+export default TextFieldWrapper

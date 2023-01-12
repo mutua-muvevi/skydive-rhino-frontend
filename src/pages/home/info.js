@@ -13,11 +13,11 @@ export const navItem = {
 		},
 		{
 			label: "about",
-			link: "/about"
+			link: "/landing/about"
 		},
 		{
 			label: "contact",
-			link: "/contact"
+			link: "/landing/contact"
 		},
 	]
 }

@@ -17,7 +17,7 @@ const HomeCard = ({data}) => {
 	const StyledHomeCard = styled(Box)(({ theme }) => ({
 		height: "50vh",
 		width: "100%",
-		// borderRadius: theme.shape.borderRadius,
+		borderRadius: theme.shape.borderRadius,
 		backgroundImage: `url(${data.image})`,
 		position: "center",
 		backgroundSize: "cover",
