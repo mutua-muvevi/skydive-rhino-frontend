@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import { styled } from "@mui/system";
 import Banner from "../../components/ui/banner";
 
@@ -7,6 +7,7 @@ import Gear from "./sections/gear";
 import Jumps from "./sections/jumps";
 import Safety from "./sections/safety";
 import WhoWeAre from "./sections/whoweare";
+import WhyUs from "./sections/whyus";
 
 const StyledAbout = styled(Box)(({ theme }) => ({
 }))
@@ -20,11 +21,14 @@ const About = () => {
 				title="About us"
 				subtile="Who we are"
 			/>
-			<WhoWeAre/>
-			<Jumps/>
-			<Safety/>
-			<FAQ/>
-			<Gear/>
+			<Stack direction="column" spacing={3}>
+				<WhoWeAre/>
+				<WhyUs/>
+				<Jumps/>
+				<Safety/>
+				<FAQ/>
+				<Gear/>
+			</Stack>
 		</StyledAbout>
 	)
 }
