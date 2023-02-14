@@ -6,7 +6,7 @@ import { jumpCardContent } from "../info"
 const videoLink = "https://res.cloudinary.com/dqweh6zte/video/upload/v1673035911/skydive%20rhino/videos/pexels-leo-salom-7997309_tzgcig.mp4"
 
 const StyledJumps = styled(Box)(({ theme }) => ({
-	height: "75vh",
+	minHeight: "75vh",
 	background: "url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAAXNSR0IArs4c6QAAAChJREFUGFcti8ENADAQgmD/oWm89CMGoygUAsnoXJOh/imNM3dZWwYPx6AOCD6mrOwAAAAASUVORK5CYII=) repeat"
 }));
 
@@ -15,19 +15,21 @@ const styledVideo = {
 	zIndex: -1,
 	top: 0,
 	left: 0,
-	height: "75vh",
+	minHeight: "75vh",
 	objectFit: "cover",
 	
 	width: "100%",
 }
 
 const StyledContainer = styled(Container)(({ theme }) => ({
-	marginTop: "-75vh",
+	marginTop: "-95vh",
 	maxWidth: "100vw !important",
 	display: "flex",
 	justifyContent: "center",
 	alignItems: "center",
-	minHeight: "75vh"
+	minHeight: "75vh",
+	paddingTop:"30px",
+	paddingBottom: "30px"
 }));
 
 const StyledStack = styled(Stack)(({ theme }) => ({

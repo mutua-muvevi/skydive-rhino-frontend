@@ -15,12 +15,8 @@ const HomeContent = () => {
 			spacing={3}
 			alignItems="flex-end"
 		>
-			<Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
+			<Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
 				<HomeDetails/>
-			</Grid>
-
-			<Grid item xs={12} sm={12} md={12} lg={6} xl={6}>
-				<HomeCards/>
 			</Grid>
 		</StyledHomeContent>
 	)
