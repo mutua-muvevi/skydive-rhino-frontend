@@ -20,8 +20,8 @@ const Homepage = () => {
 			<HomeBanner/>
 			<HomeAbout/>
 			<HomeWhyUs/>
-			<HomeFreefall/>
 			<HomeTandem/>
+			<HomeFreefall/>
 			<HomeWingSuit/>
 			<HomePhotography/>
 			<HomeHelicopter/>
