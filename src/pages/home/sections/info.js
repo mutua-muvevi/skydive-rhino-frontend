@@ -78,3 +78,23 @@ export const tandem = {
 	],
 	image: tandemImage
 }
+
+export const freefall = {
+	paragraph: [
+		`At Sky Dive Rhino Kenya, we offer the opportunity for thrill-seekers to take their skydiving experience to the next level with our group free fall skydiving. Also known as formation skydiving, this activity allows a group of individuals to jump out of the plane together and experience the exhilaration of free falling in formation.`,
+		`Our experienced instructors will guide you and your group through the proper techniques and hand signals needed to execute the formation, ensuring a safe and enjoyable experience for all participants. This activity is perfect for groups of friends, families, or even corporate team building events.`,
+		`The rush of falling through the sky in formation with your loved ones or colleagues is an experience that is truly unforgettable. Not only that, but our professional photographers and videographers will be on hand to capture the beautiful and unique memories of your group free fall skydiving experience.`,
+		`Book your group free fall skydiving experience today and discover the thrill of falling through the sky in formation with your loved ones or colleagues. It's a perfect opportunity to make memories that will last a lifetime.`,
+	],
+	image: tandemImage
+}
+
+export const wingsuit = {
+	paragraph: [
+		`At Sky Dive Rhino Kenya, we offer the exciting and exhilarating activity of wing suit skydiving for the experienced skydivers looking for a unique and thrilling experience.`,
+		`During a wing suit skydiving jump, participants will jump out of the plane wearing a special suit that allows them to fly through the air like a bird. This activity requires a high level of skill and experience, and is not recommended for first-time skydivers.`,
+		`Our experienced instructors will guide you through the proper techniques and safety protocols necessary for a successful wing suit skydiving jump. They will also provide training and coaching to help you master the skills necessary to fly through the air safely and efficiently.`,
+		`The stunning views and the feeling of flying like a bird make wing suit skydiving an unforgettable experience. At Sky Dive Rhino Kenya, we take safety seriously, and only experienced jumpers are allowed to participate in wing suit skydiving. Book your wing suit skydiving experience today and discover the thrill of flying through the air like a bird.`,
+	],
+	image: tandemImage
+}

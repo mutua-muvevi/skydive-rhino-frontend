@@ -56,7 +56,7 @@ const HomeWhyUs = () => {
 											<Typography variant="h5" color="primary">
 												{el.title}
 											</Typography>
-											<Typography variant="body2" color="text.secondary">
+											<Typography variant="body2" color="text.secondary"  textAlign="justify">
 												{el.text}
 											</Typography>
 										</Stack>

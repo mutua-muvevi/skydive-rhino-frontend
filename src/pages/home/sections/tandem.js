@@ -43,7 +43,7 @@ const HomeTandem = () => {
 					</Typography>
 					<div>
 						<StyledGrid container spacing={3}>
-							<StyledGriditem item xs={12} sm={12} md={12} lg={12} xl={12}>
+							<StyledGriditem item xs={12} sm={12} md={12} lg={6} xl={6}>
 								<Stack spacing={2}>
 									{
 										tandem.paragraph.map((el, i) => (
@@ -56,7 +56,7 @@ const HomeTandem = () => {
 							</StyledGriditem>
 
 
-							<StyledGriditem item xs={12} sm={12} md={12} lg={12} xl={12}>
+							<StyledGriditem item xs={12} sm={12} md={12} lg={6} xl={6}>
 								<StyledCard>
 									<CardMedia
 										component="img"
