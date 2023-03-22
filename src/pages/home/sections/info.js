@@ -1,3 +1,5 @@
+import { FaPlane } from "react-icons/fa";
+
 export const about = {
 	aboutUs: [
 		`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris. Ut malesuada odio ac dui tempus convallis sed eget nulla. Integer et justo tellus. Sed pretium ut nulla ac congue`,
@@ -27,3 +29,41 @@ export const about = {
 		},
 	]
 }
+
+const styledIcons = {
+	fontSize: "30px",
+	color: "#34a4eb"
+}
+
+export const whyUs = [
+	{
+		icon: <FaPlane style={styledIcons}/>,
+		title: "100000+ flight",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris."
+	},
+	{
+		icon: <FaPlane style={styledIcons}/>,
+		title: "100000+ flight",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris."
+	},
+	{
+		icon: <FaPlane style={styledIcons}/>,
+		title: "100000+ flight",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris."
+	},
+	{
+		icon: <FaPlane style={styledIcons}/>,
+		title: "100000+ flight",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris."
+	},
+	{
+		icon: <FaPlane style={styledIcons}/>,
+		title: "100000+ flight",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris."
+	},
+	{
+		icon: <FaPlane style={styledIcons}/>,
+		title: "100000+ flight",
+		text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris."
+	},
+]
