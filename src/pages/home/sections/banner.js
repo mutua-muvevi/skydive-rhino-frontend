@@ -41,7 +41,7 @@ const HomeBanner = () => {
 					<Typography variant="h2" style={titlesFont}>
 						Skydive Rhino
 					</Typography>
-					<Typography variant="subtitle1" style={titlesFont}>
+					<Typography variant="subtitle1" style={titlesFont} textAlign="justify">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris. Ut malesuada odio ac dui tempus convallis sed eget nulla. Integer et justo tellus. Sed pretium ut nulla ac congue
 					</Typography>
 					<StyledButton variant="contained" color="primary">
