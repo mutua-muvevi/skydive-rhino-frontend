@@ -12,16 +12,12 @@ import LandingLayout from "./layout/layout";
 const Router = () => {
 	return useRoutes([
 		{
-			path: "/",
-			element: <Homepage/>
-		},
-		{
 			path: "/landing",
 			element: <LandingLayout/>,
 			children: [
 				{
-					path: "/landing/about",
-					element: <About/>
+					path: "/landing/home",
+					element: <Homepage/>
 				},
 				{
 					path: "/landing/contact",
@@ -33,10 +29,10 @@ const Router = () => {
 			path: "/book",
 			element: <Book/>
 		},
-		{
-			path: "*",
-			element: <Navigate to="/404" replace/>
-		}
+		// {
+		// 	path: "*",
+		// 	element: <Navigate to="/404" replace/>
+		// }
 	])
 }
 
