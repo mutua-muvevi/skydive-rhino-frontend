@@ -1,7 +1,7 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
-const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1673047336/skydive%20rhino/images/kamil-pietrzak-H22w-tq0SeQ-unsplash_cn6hbi.jpg"
+const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679652035/skydive%20rhino/images/IMG_20230201_145259_013_posegl.jpg"
 
 const StyledHomeBanner = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",

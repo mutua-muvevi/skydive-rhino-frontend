@@ -36,6 +36,18 @@ const StyledGridItem = styled(Grid)(({theme}) => ({
 
 }))
 
+const StyledIconBox = styled(Box)(({ theme }) => ({
+	display: "flex",
+	justifyContent: "center",
+	alignItems: "center",
+	flexDirection: "column",
+	width: "70px",
+	height: "70px",
+	backgroundColor: theme.palette.secondary.main,
+	color: "#fff",
+	borderRadius: "50%"
+}))
+
 const HomeWhyUs = () => {
 	return (
 		<StyledHomeWhyUs>
@@ -52,8 +64,10 @@ const HomeWhyUs = () => {
 								whyUs.map((el, i) => (
 									<StyledGridItem key={i} item xs={12} sm={12} md={6} lg={4} xl={4}>
 										<Stack direction="column" spacing={1.5}>
-											{el.icon}
-											<Typography variant="h5" color="primary">
+											<StyledIconBox>
+												{el.icon}
+											</StyledIconBox>
+											<Typography variant="h5" color="text.primary">
 												{el.title}
 											</Typography>
 											<Typography variant="body2" color="text.secondary"  textAlign="justify">

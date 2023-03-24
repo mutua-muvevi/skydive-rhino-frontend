@@ -15,7 +15,7 @@ const Contact = () => {
 				height="50vh"
 				image="https://res.cloudinary.com/dqweh6zte/image/upload/v1673047336/skydive%20rhino/images/kamil-pietrzak-H22w-tq0SeQ-unsplash_cn6hbi.jpg"
 				title="Contact us"
-				subtile="Lorem ipsum"
+				subtile="Adventure is just a phone call away - contact us now!"
 			/>
 			<ContactDetailsForm/>
 			<Map/>
