@@ -18,7 +18,7 @@ const Contact = () => {
 				image={image}
 				title="Contact us"
 				subtile="Adventure is just a phone call away - contact us now!"
-				position="bottom"
+				position="center"
 			/>
 			<ContactDetailsForm/>
 			<Map/>
