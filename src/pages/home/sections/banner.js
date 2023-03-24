@@ -42,11 +42,8 @@ const HomeBanner = () => {
 						Skydive Rhino
 					</Typography>
 					<Typography variant="subtitle1" style={titlesFont} textAlign="justify">
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at pellentesque leo. Quisque ac rutrum leo. Curabitur vulputate feugiat sapien, sed accumsan nisi ultrices non. Proin quis suscipit nisi. Praesent a enim eget sem maximus malesuada. Maecenas ut tempor arcu, quis pharetra ipsum. Nullam vel justo luctus, feugiat est at, ultrices mauris. Ut malesuada odio ac dui tempus convallis sed eget nulla. Integer et justo tellus. Sed pretium ut nulla ac congue
+						Welcome to Sky Dive Rhino Kenya, where we provide a one-of-a-kind skydiving experience that is safe, exciting, and unforgettable. Our team of experienced instructors will guide you through every step of the process, from your initial jump to your landing. We use state-of-the-art equipment and the latest safety protocols to ensure a smooth and enjoyable experience for our customers. Our unique location in the heart of Kenya, and our MAULE planes, allow us to take you to some of the most remote and beautiful locations, where you can experience the thrill of skydiving with a breathtaking view. Join us and feel the rush of adrenaline as you free fall from thousands of feet above the ground, and soar like a bird, while enjoying the beautiful views of Kenya. Book your skydiving experience today and make memories that will last a lifetime.
 					</Typography>
-					<StyledButton variant="contained" color="primary">
-						Explore More
-					</StyledButton>
 				</StyledBannerItemsStack>
 			</StyledContainer>
 		</StyledHomeBanner>
