@@ -3,6 +3,7 @@ import { styled } from "@mui/system";
 
 import { wingsuit } from "./info";
 
+const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679652728/skydive%20rhino/images/wingsuit_ckwvdc.jpg"
 
 const StyledHomeWingsuit = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",
@@ -47,7 +48,7 @@ const HomeWingsuit = () => {
 								<StyledCard>
 									<CardMedia
 										component="img"
-										src={wingsuit.image}
+										src={image}
 										alt="wingsuit"
 										height="100%"
 									/>

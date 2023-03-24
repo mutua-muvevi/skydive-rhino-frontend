@@ -46,7 +46,7 @@ const ContactDetails = () => {
 				Get in touch with us
 			</Typography>
 			<Typography variant="body2" color="text.primary">
-				Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.Tempor massa et laoreet. Pellentesque sit amet elementum ccumsan sit amet mattis eget, tristique at leo. Vivamus massa.
+			We're here to help you make your skydiving dreams a reality, and the first step is getting in touch with us. Whether you have questions about our services, want to book a jump, or just need some advice, we're always happy to hear from you. Our experienced team is dedicated to providing exceptional customer service and support, and we will do everything in our power to make your skydiving experience as smooth and enjoyable as possible. So don't hesitate – get in touch with us today and let us help you take the leap into the thrilling world of skydiving!
 			</Typography>
 			{
 				contactItems.map((item, i) => (

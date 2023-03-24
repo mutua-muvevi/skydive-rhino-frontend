@@ -17,12 +17,12 @@ const subHeaderStyles = {
 	fontSize: "30px"
 }
 
-const Banner = ({ height, image, title, subtile }) => {
+const Banner = ({ height, image, title, subtile, position }) => {
 	
 	const StyledBanner = styled(Box)(({ theme }) => ({
 		height: height ? height: "50vh",
 		backgroundImage: `url(${image})`,
-		backgroundPosition: "center",
+		backgroundPosition: position ? position : "center",
 		backgroundSize: "cover",
 		backgroundAttachment: "fixed",
 		backgroundRepeat: "no-repeat",

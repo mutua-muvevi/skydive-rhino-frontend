@@ -2,7 +2,7 @@ import { Box, Container, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 import { helicopterSkydiving } from "./info";
 
-const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1673047325/skydive%20rhino/images/kamil-pietrzak-G0FsO2Ca8nQ-unsplash_zkucd7.jpg"
+const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679653564/skydive%20rhino/images/pexels-pixabay-38447_yvzwe5.jpg"
 
 const StyledHomeTandem = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",

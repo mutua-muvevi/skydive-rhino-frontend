@@ -84,7 +84,7 @@ const HomeAbout = () => {
 											<Stack direction="column" spacing={3}>
 												<StyledShapeOne/>
 												<Typography variant="h2" color="primary" sx={{lineHeight:"20%"}}>
-													{el.number}
+													{el.number}+
 												</Typography>
 
 												<Box>

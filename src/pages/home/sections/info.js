@@ -17,7 +17,7 @@ export const about = {
 		{
 			title: "Wingsuit jumps",
 			number: 7000,
-			text: "Over 7000 tandem wingsuit – trust the pros for your skydiving adventure!",
+			text: "Over 7000+ tandem wingsuit – trust the pros for your skydiving adventure!",
 		},
 		{
 			title: "NightTime jumps",
@@ -34,7 +34,7 @@ export const about = {
 
 const styledIcons = {
 	fontSize: "30px",
-	color: "#34a4eb"
+	color: "inherit"
 }
 
 export const whyUs = [
@@ -70,7 +70,7 @@ export const whyUs = [
 	},
 ]
 
-const tandemImage ="https://res.cloudinary.com/dqweh6zte/image/upload/v1673047336/skydive%20rhino/images/kamil-pietrzak-H22w-tq0SeQ-unsplash_cn6hbi.jpg"
+const tandemImage = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679652968/skydive%20rhino/images/pexels-tom-fisk-11124980_s4ptlx.jpg"
 
 export const tandem = {
 	paragraph: [
