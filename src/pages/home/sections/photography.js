@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 
 import { photographyAndVideography } from "../info";
 
-const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1673047324/skydive%20rhino/images/skydiving-gd90b87829_1920_ztat2b.jpg"
+const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679655247/skydive%20rhino/images/videography-transformed_uiyrb8.jpg"
 
 const StyledHomePhotography = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",
