@@ -10,7 +10,7 @@ import { NavLink } from 'react-router-dom';
 
 import SwipeableSideDrawer from './drawer';
 
-const logo = "https://res.cloudinary.com/dqweh6zte/image/upload/v1658133237/henriot/logo/henriot_logo_mefxsi.png";
+const logo = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679650180/skydive%20rhino/images/skydive_rhino_kenya_logo_trnkqy.png"
 
 const TopAppBar = styled(AppBar)({
 	zIndex: 3,
@@ -50,8 +50,12 @@ const StyledButton = styled(Button)({
 	minWidth: "200px"
 })
 
-const styledMobileLogo = {
+const styledLogo = {
+	height: "60px"
+}
 
+const styledMobileLogo = {
+	height: "40px"
 }
 
 const iconButtonSX = {
@@ -78,17 +82,15 @@ const Navigation = () => {
 
 								<StyledMenuStack direction="row" justifyContent="space-between" alignItems="center" spacing={5}>
 									<StyledLogoSection>
-										<Typography variant="h2" style={{color: "#fff"}}>
-											Logo
-										</Typography>
+										<img src={logo} alt="Skydive logo" style={styledLogo}/>
 									</StyledLogoSection>
 
-									<Stack direction="row">
+									<Stack direction="row" spacing={3}>
 										{
 											menuItems.map((el, i) => (
 												<StyledNavButton sx={{textAlign: "left"}} variant="text" key={i}>
 													<NavLink to={el.path} style={styledLink}>
-														<Typography variant="subtitle1" color="text.primary" style={{textTransform: "uppercase"}}>
+														<Typography variant="subtitle1" style={{textTransform: "uppercase", color: "#fff"}}>
 															{el.label}
 														</Typography>
 													</NavLink>
@@ -101,7 +103,7 @@ const Navigation = () => {
 
 									<StyledButtonStack direction="row" spacing={3}>
 										<StyledButton variant="contained" color="secondary">
-											<Typography variant="subtitle1" color="primary">
+											<Typography variant="subtitle1" >
 												Login
 											</Typography>
 										</StyledButton>
@@ -116,10 +118,7 @@ const Navigation = () => {
 						<TopAppBar >
 							<Container maxWidth="xl">
 								<Stack direction="row" justifyContent="space-between" alignItems="center">
-									{/* <img src={logo} alt="Henriot mobile logo" style={styledMobileLogo}/> */}
-									<Typography variant="h3" style={{color: "#fff"}}>
-										Logo
-									</Typography>
+									<img src={logo} alt="Henriot mobile logo" style={styledMobileLogo}/>
 									<IconButton
 										size="large"
 										aria-label="account of current user"

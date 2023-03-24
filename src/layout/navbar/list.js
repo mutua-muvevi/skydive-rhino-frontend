@@ -5,7 +5,7 @@ import { styled } from "@mui/system";
 
 import { drawerMenuItems } from "./info";
 
-const Logo = "https://res.cloudinary.com/dqweh6zte/image/upload/v1658133237/henriot/logo/henriot_logo_mefxsi.png";
+const logo = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679650180/skydive%20rhino/images/skydive_rhino_kenya_logo_trnkqy.png"
 
 const StyledLogoListItem = styled(List)(({theme}) => ({
 
@@ -13,14 +13,15 @@ const StyledLogoListItem = styled(List)(({theme}) => ({
 
 const LogoParent = styled(ListItem)(({theme}) => ({
 	height: "100px",
-	width: "60vw"
+	width: "60vw",
 }));
 
 const LogoItem = styled("img")(({theme}) => ({
-	width: "60vw",
+	// width: "60vw",
+	display: "flex",
+	flexDirection: "column",
+	alignItems: "start",
 	height: "100%",
-	marginLeft: "auto",
-	marginRight: "auto",
 	marginBottom: "20px",
 	margin: "20px auto"
 }));
@@ -38,10 +39,7 @@ const SwipeableDrawerList = ({ mobileNav, setMobileNav }) => {
 		>
 			<StyledLogoListItem component="nav" aria-label="Henriot mobile navigation">
 				<LogoParent>
-					{/* <LogoItem src={Logo} alt="Henriot Logo"/> */}
-					<Typography variant="h2" color="primary">
-						Logo
-					</Typography>
+					<LogoItem src={logo} alt="Skydive Rhino Kenya Logo"/>
 				</LogoParent>
 
 				<Divider color="grey"/>
