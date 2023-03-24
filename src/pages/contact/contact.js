@@ -5,6 +5,8 @@ import Banner from "../../components/ui/banner";
 import ContactDetailsForm from "./sections/details";
 import Map from "./sections/map";
 
+const image ="https://res.cloudinary.com/dqweh6zte/image/upload/v1679654149/skydive%20rhino/images/young-man-answering-telework-call-customer-service-job-talking-clients-phone-helpline-male-worker-using-audio-headset-given-assistance-support-people-close-up_aw6tix.jpg"
+
 const StyledContact = styled(Box)(({ theme }) => ({
 }))
 
@@ -13,9 +15,10 @@ const Contact = () => {
 		<StyledContact>
 			<Banner
 				height="50vh"
-				image="https://res.cloudinary.com/dqweh6zte/image/upload/v1673047336/skydive%20rhino/images/kamil-pietrzak-H22w-tq0SeQ-unsplash_cn6hbi.jpg"
+				image={image}
 				title="Contact us"
 				subtile="Adventure is just a phone call away - contact us now!"
+				position="bottom"
 			/>
 			<ContactDetailsForm/>
 			<Map/>
