@@ -3,6 +3,8 @@ import { styled } from "@mui/system";
 
 import { about } from "./info";
 
+const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679749553/skydive%20rhino/images/IMG_20230126_072246_564_voxwjd.jpg";
+
 const StyledHomeAbout = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",
 	paddingTop: "30px",
@@ -16,11 +18,12 @@ const StyledHomeAboutContainer = styled(Container)(({ theme }) => ({
 
 }))
 
+const styledImage = {
+	borderRadius: "5px"
+}
+
+
 const StyledAboutSection = styled(Stack)(({ theme }) => ({
-
-}))
-
-const StyledWhySection = styled(Grid)(({ theme }) => ({
 
 }))
 
@@ -66,15 +69,25 @@ const HomeAbout = () => {
 					<Typography variant="h2" color="primary">
 						Who we are
 					</Typography>
-					<StyledAboutSection spacing={1.5}>
-						{
-							about.aboutUs.map((el, i) => (
-								<Typography key={i} variant="body2" color="text.primary" textAlign="justify">
-									{el}
-								</Typography>
-							))
-						}
-					</StyledAboutSection>
+					<div>
+						<Grid container spacing={3}>
+							<Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
+								<StyledAboutSection spacing={1.5}>
+									{
+										about.aboutUs.map((el, i) => (
+											<Typography key={i} variant="body2" color="text.primary" textAlign="justify">
+												{el}
+											</Typography>
+										))
+									}
+								</StyledAboutSection>					
+							</Grid>
+							<Grid item xs={12} sm={12} md={6} lg={5} xl={5}>
+								<img src={image} alt="Skydive rhino staff" style={styledImage}/>
+							</Grid>
+						</Grid>
+					</div>
+
 					<StyledWhyItems container spacing={3} >
 						{
 							about.card.map((el, i) => (

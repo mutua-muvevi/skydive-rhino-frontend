@@ -26,7 +26,8 @@ const Banner = ({ height, image, title, subtile, position }) => {
 		backgroundSize: "cover",
 		backgroundAttachment: "fixed",
 		backgroundRepeat: "no-repeat",
-		marginTop: "-80px"
+		paddingTop: "30px",
+		paddingBottom: "30px"
 	}));
 
 	return (

@@ -1,4 +1,4 @@
-import { Box, Card, CardMedia, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { tandem } from "./info";
@@ -29,9 +29,11 @@ const StyledGriditem = styled(Grid)(({ theme }) => ({
 
 }))
 
-const StyledCard = styled(Card)(({ theme }) => ({
-	minHeight: "400px"
-}));
+
+const styledImage = {
+	borderRadius: "5px"
+}
+
 
 const HomeTandem = () => {
 	return (
@@ -43,7 +45,7 @@ const HomeTandem = () => {
 					</Typography>
 					<div>
 						<StyledGrid container spacing={3}>
-							<StyledGriditem item xs={12} sm={12} md={12} lg={6} xl={6}>
+							<StyledGriditem item xs={12} sm={12} md={6} lg={7} xl={7}>
 								<Stack spacing={2}>
 									{
 										tandem.paragraph.map((el, i) => (
@@ -56,15 +58,8 @@ const HomeTandem = () => {
 							</StyledGriditem>
 
 
-							<StyledGriditem item xs={12} sm={12} md={12} lg={6} xl={6}>
-								<StyledCard>
-									<CardMedia
-										component="img"
-										src={tandem.image}
-										alt="tandem"
-										height="100%"
-									/>
-								</StyledCard>
+							<StyledGriditem item xs={12} sm={12} md={6} lg={5} xl={5}>
+								<img src={tandem.image} alt="Skydive rhino Tandem jump" style={styledImage}/>
 							</StyledGriditem>
 						</StyledGrid>
 					</div>

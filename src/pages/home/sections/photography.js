@@ -43,7 +43,7 @@ const HomePhotography = () => {
 					
 					<div>
 						<StyledGrid container spacing={3}>
-							<StyledGridItem item xs={12} sm={12} md={12} lg={6} xl={6}>
+							<StyledGridItem item xs={12} sm={12} md={6} lg={7} xl={7}>
 								<Stack direction="column" spacing={1.5}>
 									{
 										photographyAndVideography.paragraph.map((el, i) => (
@@ -55,7 +55,7 @@ const HomePhotography = () => {
 								</Stack>
 							</StyledGridItem>
 
-							<StyledGridItem item xs={12} sm={12} md={12} lg={6} xl={6}>
+							<StyledGridItem item xs={12} sm={12} md={6} lg={5} xl={5}>
 								<img src={image} alt="Photography and videography" style={imageStyle}/>
 							</StyledGridItem>
 						</StyledGrid>
