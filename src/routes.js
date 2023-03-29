@@ -3,7 +3,6 @@ import { Navigate, useRoutes } from "react-router-dom";
 
 //module imports
 import Homepage from "./pages/home/home";
-import About from "./pages/about/about";
 import Contact from "./pages/contact/contact";
 import Book from "./pages/book/book";
 import LandingLayout from "./layout/layout";
@@ -28,6 +27,10 @@ const Router = () => {
 		{
 			path: "/book",
 			element: <Book/>
+		},
+		{
+			path: "/",
+			element: <Navigate to="/landing/home" replace />,
 		},
 		// {
 		// 	path: "*",
