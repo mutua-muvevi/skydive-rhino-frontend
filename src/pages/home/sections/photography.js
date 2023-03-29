@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { photographyAndVideography } from "../info";
@@ -28,7 +28,6 @@ const StyledGridItem = styled(Grid)(({ theme }) => ({
 
 const imageStyle = {
 	borderRadius: "5px",
-	// height: "200px"
 }
 
 const HomePhotography = () => {
@@ -43,20 +42,24 @@ const HomePhotography = () => {
 					
 					<div>
 						<StyledGrid container spacing={3}>
-							<StyledGridItem item xs={12} sm={12} md={6} lg={7} xl={7}>
+							<StyledGridItem item xs={12} sm={12} md={12} lg={7} xl={7}>
 								<Stack direction="column" spacing={1.5}>
 									{
 										photographyAndVideography.paragraph.map((el, i) => (
-											<Typography key={i} textAlign="justify" variant="body2" color="text.primary">
-												{el}
-											</Typography>
+											<Zoom in timeout={1000 + (i*1000)} key={i}>
+												<Typography textAlign="justify" variant="body2" color="text.primary">
+													{el}
+												</Typography>
+											</Zoom>
 										))
 									}
 								</Stack>
 							</StyledGridItem>
 
-							<StyledGridItem item xs={12} sm={12} md={6} lg={5} xl={5}>
-								<img src={image} alt="Photography and videography" style={imageStyle}/>
+							<StyledGridItem item xs={12} sm={12} md={12} lg={5} xl={5}>
+								<Zoom in timeout={3000}>
+									<img src={image} alt="Photography and videography" style={imageStyle}/>
+								</Zoom>
 							</StyledGridItem>
 						</StyledGrid>
 					</div>

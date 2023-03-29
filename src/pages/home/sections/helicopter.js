@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Grow, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 import { helicopterSkydiving } from "./info";
 
@@ -29,18 +29,22 @@ const HomeHelicopter = () => {
 	return (
 		<StyledHomeTandem>
 			<StyledContainer maxWidth="xl">
-				<StyledMainStack spacing={3} direction="column">
-					<Typography variant="h2" sx={{color: "#fff"}}>
-						Helicopter
-					</Typography>
-					{
-						helicopterSkydiving.paragraph.map((el, i) => (
-							<Typography key={i} textAlign="justify" variant="body1" sx={{color: "#fff"}}>
-								{el}
-							</Typography>
-						))
-					}
-				</StyledMainStack>
+				<Grow style={{ transformOrigin: '10 20 50' }} in timeout={1000}>
+					<StyledMainStack spacing={3} direction="column">
+						<Typography variant="h2" sx={{color: "#fff"}}>
+							Helicopter
+						</Typography>
+						{
+							helicopterSkydiving.paragraph.map((el, i) => (
+								<Zoom in timeout={1000 + (i*1000)} key={i}>
+									<Typography key={i} textAlign="justify" variant="body1" sx={{color: "#fff"}}>
+										{el}
+									</Typography>
+								</Zoom>
+							))
+						}
+					</StyledMainStack>
+				</Grow>
 			</StyledContainer>
 		</StyledHomeTandem>
 	)

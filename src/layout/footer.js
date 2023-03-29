@@ -1,4 +1,4 @@
-import { Box, Button, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Container, Grid, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { Formik, Form } from "formik";
@@ -18,8 +18,8 @@ const StyledFooter = styled(Box)(({ theme }) => ({
 	backgroundSize: "cover",
 	backgroundColor: "rgba(0, 0, 0, 0.86)",
 	color: "#fff",
-	paddingTop: "20px",
-	paddingBottom: "20px",
+	paddingTop: "30px",
+	paddingBottom: "30px",
 }));
 
 const StyledContainer = styled(Container)(({ theme }) => ({
@@ -33,7 +33,7 @@ const StyledfooterStack = styled(Stack)(({ theme }) => ({
 const StyledFooterHeader = styled(Box)(({theme}) => ({
 	display: "flex",
 	flexDirection: "column",
-	alignItems:"center",
+	alignItems:"left",
 
 }));
 
@@ -118,8 +118,9 @@ const Footer = () => {
 			<StyledContainer maxWidth="xl">
 				<StyledfooterStack
 					direction="column"
-					justifyContent="center"
+					justifyContent="left"
 					spacing={3}
+					textAlign="left"
 				>
 					<StyledFooterHeader>
 						<Typography variant="h4">
@@ -142,7 +143,7 @@ const Footer = () => {
 								<Grid container spacing={3}>
 									{
 										newsLetterForm.map((el, i) => (
-											<Grid item xs={12} sm={12} md={4} lg={4} xl={4} key={i}>
+											<Grid item xs={12} sm={12} md={12} lg={4} xl={4} key={i}>
 												<TextFieldWrapper
 													color="primary"
 													type={el.type} 
@@ -154,7 +155,7 @@ const Footer = () => {
 										))
 									}
 
-									<Grid item xs={12} sm={12} md={4} lg={4} xl={4}>
+									<Grid item xs={12} sm={12} md={12} lg={4} xl={4}>
 										<StyledButton fullWidth type="submit" variant="contained" color="primary" endIcon={<FaPaperPlane/>}>
 											<Typography variant="body1">
 												Join now
@@ -171,47 +172,49 @@ const Footer = () => {
 							{
 								footerContent.map((el, i) => (
 									<StyledGridItem key={i} item xs={12} sm={12} md={12} lg={4} xl={4}>
-										<StyledStack
-											direction="column"
-											justifyContent="center"
-											alignItems="center"
-											spacing={3}
-										>
-											{
-												el.icon ? el.icon : ""
-											}
-											<Typography variant="h5">
-												{el.title}
-											</Typography>
-											<Stack
+										<Zoom in timeout={1000 + (i*1000)}>
+											<StyledStack
 												direction="column"
-												alignItems="center"
-												spacing={1}
+												justifyContent="center"
+												alignItems="left"
+												spacing={3}
 											>
 												{
-													el.location ? (
-														<Typography variant="body1">
-															{el.location}
-														</Typography>
-													): ""
+													el.icon ? el.icon : ""
 												}
-												{
-													el.emails ? el.emails.map((item, i) => (
-														<Typography variant="body1" key={i}>
-															{item}
-														</Typography>
-													)) : ""
-												}
-												{
-													el.tel ? el.tel.map((item, i) => (
-														<Typography variant="body1" key={i}>
-															{item}
-														</Typography>
-													)) : ""
-												}
+												<Typography variant="h5">
+													{el.title}
+												</Typography>
+												<Stack
+													direction="column"
+													alignItems="left"
+													spacing={1}
+												>
+													{
+														el.location ? (
+															<Typography variant="body1">
+																{el.location}
+															</Typography>
+														): ""
+													}
+													{
+														el.emails ? el.emails.map((item, i) => (
+															<Typography variant="body1" key={i}>
+																{item}
+															</Typography>
+														)) : ""
+													}
+													{
+														el.tel ? el.tel.map((item, i) => (
+															<Typography variant="body1" key={i}>
+																{item}
+															</Typography>
+														)) : ""
+													}
 
-											</Stack>
-										</StyledStack>
+												</Stack>
+											</StyledStack>
+										</Zoom>
 										
 									</StyledGridItem>
 								))

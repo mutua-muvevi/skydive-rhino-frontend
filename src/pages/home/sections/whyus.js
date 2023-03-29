@@ -1,7 +1,9 @@
-import { Box, Container, Grid, Stack, Typography, } from "@mui/material";
+import { Box, Container, Grid, Grow, Stack, Typography, Zoom, } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { whyUs } from "./info";
+
+const image ="https://res.cloudinary.com/dqweh6zte/image/upload/v1679998802/skydive%20rhino/images/paragliding_hdbsz8.jpg"
 
 const StyledHomeWhyUs = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",
@@ -10,7 +12,12 @@ const StyledHomeWhyUs = styled(Box)(({ theme }) => ({
 	display: "flex",
 	justifyContent: "center",
 	flexDirection:"column",
-	backgroundColor: theme.palette.background.paper
+	backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.5)), url(${image})`,
+	backgroundSize: "cover",
+	backgroundAttachment: "fixed",
+	backgroundRepeat:"no-repeat",
+	backgroundPosition: "center",
+	color: "#fff"
 }));
 
 
@@ -54,30 +61,34 @@ const HomeWhyUs = () => {
 			<Container maxWidth='xl'>
 				<StyledShapeOne/>
 				<StyledMainStack direction="column" spacing={3}>
-					<Typography variant="h2" color="primary">
+					<Typography variant="h2">
 						Why us
 					</Typography>
 
 					<div>
-						<StyledGrid container spacing={3}>
-							{
-								whyUs.map((el, i) => (
-									<StyledGridItem key={i} item xs={12} sm={12} md={6} lg={4} xl={4}>
-										<Stack direction="column" spacing={1.5}>
-											<StyledIconBox>
-												{el.icon}
-											</StyledIconBox>
-											<Typography variant="h5" color="text.primary">
-												{el.title}
-											</Typography>
-											<Typography variant="body2" color="text.secondary"  textAlign="justify">
-												{el.text}
-											</Typography>
-										</Stack>
-									</StyledGridItem>
-								))
-							}
-						</StyledGrid>
+						<Grow style={{ transformOrigin: '10 20 50' }} in timeout={1000}>
+							<StyledGrid container spacing={3}>
+								{
+									whyUs.map((el, i) => (
+										<StyledGridItem key={i} item xs={12} sm={12} md={6} lg={4} xl={4}>
+											<Zoom in timeout={1000 + (i * 1000)}>
+												<Stack direction="column" spacing={1.5}>
+													<StyledIconBox>
+														{el.icon}
+													</StyledIconBox>
+													<Typography variant="h4" textAlign="justify">
+														{el.title}
+													</Typography>
+													<Typography variant="body2" textAlign="justify">
+														{el.text}
+													</Typography>
+												</Stack>
+											</Zoom>
+										</StyledGridItem>
+									))
+								}
+							</StyledGrid>
+						</Grow>
 					</div>
 				</StyledMainStack>
 			</Container>

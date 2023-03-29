@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { tandem } from "./info";
@@ -45,21 +45,25 @@ const HomeTandem = () => {
 					</Typography>
 					<div>
 						<StyledGrid container spacing={3}>
-							<StyledGriditem item xs={12} sm={12} md={6} lg={7} xl={7}>
+							<StyledGriditem item xs={12} sm={12} md={12} lg={7} xl={7}>
 								<Stack spacing={2}>
 									{
 										tandem.paragraph.map((el, i) => (
-											<Typography variant="body2" color="text.primary" textAlign="justify" key={i}>
-												{el}
-											</Typography>
+											<Zoom in timeout={1000 + (i*1000)}>
+												<Typography variant="body2" color="text.primary" textAlign="justify" key={i}>
+													{el}
+												</Typography>
+											</Zoom>
 										))
 									}
 								</Stack>
 							</StyledGriditem>
 
 
-							<StyledGriditem item xs={12} sm={12} md={6} lg={5} xl={5}>
-								<img src={tandem.image} alt="Skydive rhino Tandem jump" style={styledImage}/>
+							<StyledGriditem item xs={12} sm={12} md={12} lg={5} xl={5}>
+								<Zoom in timeout={1500}>
+									<img src={tandem.image} alt="Skydive rhino Tandem jump" style={styledImage}/>
+								</Zoom>
 							</StyledGriditem>
 						</StyledGrid>
 					</div>

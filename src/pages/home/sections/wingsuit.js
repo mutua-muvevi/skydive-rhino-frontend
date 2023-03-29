@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { wingsuit } from "./info";
@@ -38,31 +38,35 @@ const HomeWingsuit = () => {
 	return (
 		<StyledHomeWingsuit>
 			<StyledContainer maxWidth="xl">
-				<StyledMainStack direction="column" spacing={3}>
-					<Typography variant="h2" color="primary">
-						Wingsuit Jump
-					</Typography>
-					<div>
-						<StyledGrid container spacing={3}>
-							<StyledGriditem item xs={12} sm={12} md={12} lg={5} xl={5}>
-								<img src={image} alt="Skydive rhino Wimgsuit jump" style={styledImage}/>
-							</StyledGriditem>
+				<Zoom in timeout={1500} ease>
+					<StyledMainStack direction="column" spacing={3}>
+						<Typography variant="h2" color="primary">
+							Wingsuit Jump
+						</Typography>
+						<div>
+							<StyledGrid container spacing={3}>
+								<StyledGriditem item xs={12} sm={12} md={12} lg={5} xl={5}>
+									<img src={image} alt="Skydive rhino Wimgsuit jump" style={styledImage}/>
+								</StyledGriditem>
 
-							<StyledGriditem item xs={12} sm={12} md={12} lg={7} xl={7}>
-								<Stack spacing={2}>
-									{
-										wingsuit.paragraph.map((el, i) => (
-											<Typography variant="body2" color="text.primary" textAlign="justify" key={i}>
-												{el}
-											</Typography>
-										))
-									}
-								</Stack>
-							</StyledGriditem>
+								<StyledGriditem item xs={12} sm={12} md={12} lg={7} xl={7}>
+									<Stack spacing={2}>
+										{
+											wingsuit.paragraph.map((el, i) => (
+												<Zoom in timeout={1000 + (i*1000)} key={i}>
+													<Typography variant="body2" color="text.primary" textAlign="justify" key={i}>
+														{el}
+													</Typography>
+												</Zoom>
+											))
+										}
+									</Stack>
+								</StyledGriditem>
 
-						</StyledGrid>
-					</div>
-				</StyledMainStack>
+							</StyledGrid>
+						</div>
+					</StyledMainStack>
+				</Zoom>
 			</StyledContainer>
 		</StyledHomeWingsuit>
 	)
