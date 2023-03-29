@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Stack, Typography } from "@mui/material";
+import { Box, Container, Grid, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { jumpSchool } from "../info";
@@ -44,20 +44,24 @@ const HomeJumpSchool = () => {
 					</Typography>
 					<div>
 						<Grid container spacing={3}>
-							<Grid item xs={12} sm={12} md={6} lg={7} xl={7}>
+							<Grid item xs={12} sm={12} md={12} lg={7} xl={7}>
 								<Stack direction="column" spacing={1.5}>
 									{
 										jumpSchool.paragraph.map((el, i) => (
-											<Typography key={i} textAlign="justify" variant="body2" color="text.primary">
-												{el}
-											</Typography>
+											<Zoom in timeout={1000 + (i*1000)} key={i}>
+												<Typography textAlign="justify" variant="body2" color="text.primary">
+													{el}
+												</Typography>
+											</Zoom>
 										))
 									}
 								</Stack>
 							</Grid>
 
-							<Grid item xs={12} sm={12} md={6} lg={5} xl={5}>
-								<img src={image} alt="Skydive rhino Jumps" style={styledImage}/>
+							<Grid item xs={12} sm={12} md={12} lg={5} xl={5}>
+								<Zoom in timeout={2000}>
+									<img src={image} alt="Skydive rhino Jumps" style={styledImage}/>
+								</Zoom>
 							</Grid>
 						</Grid>
 
@@ -68,16 +72,18 @@ const HomeJumpSchool = () => {
 							{
 								jumpSchool.list.map((el, i) => (
 									<StyledGridItem item key={i} xs={12} sm={12} md={12} lg={6} xl={6}>
-										<Stack direction="column" spacing={3}>
-											<Stack direction="column" spacing={1.5}>
-												<Typography variant="h5" color="primary">
-													{el.title}
-												</Typography>
-												<Typography variant="body2" color="text.primary" textAlign="justify">
-													{el.paragraph}
-												</Typography>
+										<Zoom in timeout={3000 + (i*1000)} key={i}>
+											<Stack direction="column" spacing={3}>
+												<Stack direction="column" spacing={1.5}>
+													<Typography variant="h5" color="primary">
+														{el.title}
+													</Typography>
+													<Typography variant="body2" color="text.primary" textAlign="justify">
+														{el.paragraph}
+													</Typography>
+												</Stack>
 											</Stack>
-										</Stack>
+										</Zoom>
 									</StyledGridItem>
 								))
 							}

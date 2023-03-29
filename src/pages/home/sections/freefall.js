@@ -1,4 +1,4 @@
-import { Box, Container, Stack, Typography } from "@mui/material";
+import { Box, Container, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 import { freefall } from "./info";
 
@@ -35,9 +35,11 @@ const HomeFreefall = () => {
 					</Typography>
 					{
 						freefall.paragraph.map((el, i) => (
-							<Typography key={i} textAlign="justify" variant="body1" sx={{color: "#fff"}}>
-								{el}
-							</Typography>
+							<Zoom key={i} in timeout={1000 + (i*500)}>
+								<Typography key={i} textAlign="justify" variant="body1" sx={{color: "#fff"}}>
+									{el}
+								</Typography>
+							</Zoom>
 						))
 					}
 				</StyledMainStack>
