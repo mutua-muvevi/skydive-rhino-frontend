@@ -32,7 +32,6 @@ const Homepage = () => {
 				paragraph={bannerParagraph}
 			/>
 			<HomeAbout/>
-			<HomeWhyUs/>
 			<HomeTandem/>
 			<HomeFreefall/>
 			<HomeWingSuit/>

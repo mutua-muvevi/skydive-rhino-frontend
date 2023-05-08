@@ -1,22 +1,20 @@
-import { Box, Button, Card, CardContent, Container, Grid, Grow, Stack, Typography, Zoom } from "@mui/material";
+import { Box, Card, CardContent, Container, Grid, Grow, Stack, Typography, Zoom } from "@mui/material";
 import { styled } from "@mui/system";
 
 import { about } from "./info";
-import { Link } from "react-router-dom";
 
 const image = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679749553/skydive%20rhino/images/IMG_20230126_072246_564_voxwjd.jpg";
 
-const StyledHomeAbout = styled(Box)(({ theme }) => ({
+const StyledAboutUs = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",
 	paddingTop: "30px",
 	paddingBottom: "30px",
 	display: "flex",
 	justifyContent: "center",
-	flexDirection:"column",
-	backgroundColor: "#fff"
+	flexDirection:"column"
 }))
 
-const StyledHomeAboutContainer = styled(Container)(({ theme }) => ({
+const StyledAboutUsContainer = styled(Container)(({ theme }) => ({
 
 }))
 
@@ -63,21 +61,52 @@ const StyledShapeTwo= styled(Box)(({ theme }) => ({
 	zIndex:-3
 }))
 
-const styledLink = {
-	textDecoration: "none",
-	color: "inherit"
-}
-
-const HomeAbout = () => {
+const AboutUs = () => {
 	return (
-		<StyledHomeAbout>
-			<StyledHomeAboutContainer maxWidth="xl">
+		<StyledAboutUs>
+			<StyledAboutUsContainer maxWidth="xl">
 				<Stack direction="column" spacing={3}>
 					<Grow style={{ transformOrigin: '10 20 50' }} in timeout={1000}>
 						<Typography variant="h2" color="primary">
 							Who we are
 						</Typography>
 					</Grow>
+					
+					<StyledWhyItems container spacing={3} >
+						{
+							about.card.map((el, i) => (
+								<StyledWhyItems key={i} item xs={12} sm={6} md={6} lg={3} xl={3}>
+									<Zoom in key={i}  style={{ transformOrigin: '10 20 50' }} timeout={1500 + (i *500)}>
+										<StyledCard sx={{marginLeft:-3, marginRight: 3}}>
+											<StyledCardContent>
+												<Stack direction="column" spacing={3}>
+													<StyledShapeOne/>
+													<Typography variant="h2" color="primary" sx={{lineHeight:"20%"}}>
+														{el.number}+
+													</Typography>
+
+													<Box>
+														<Typography variant="subtitle1" color="text.primary" >
+															{el.title}
+														</Typography>
+														<Typography variant="body2" color="text.secondary" >
+															{el.text}
+														</Typography>
+													</Box>
+													<StyledShapeTwo/>
+
+													<Stack direction="column" spacing={1.5}>
+
+													</Stack>
+												</Stack>
+											</StyledCardContent>
+										</StyledCard>
+									</Zoom>
+								</StyledWhyItems>
+							))
+						}
+					</StyledWhyItems>
+					
 					<div>
 						<Grid container spacing={3}>
 							<Grid item xs={12} sm={12} md={12} lg={7} xl={7}>
@@ -91,11 +120,6 @@ const HomeAbout = () => {
 											</Grow>
 										))
 									}
-									<Link to="/landing/about" style={styledLink}>
-										<Button variant="contained" color="primary">
-											View more
-										</Button>
-									</Link>
 								</StyledAboutSection>					
 							</Grid>
 							<Grid item xs={12} sm={12} md={12} lg={5} xl={5}>
@@ -106,10 +130,11 @@ const HomeAbout = () => {
 							</Grid>
 						</Grid>
 					</div>
+
 				</Stack>
-			</StyledHomeAboutContainer>
-		</StyledHomeAbout>
+			</StyledAboutUsContainer>
+		</StyledAboutUs>
 	)
 }
 
-export default HomeAbout
+export default AboutUs

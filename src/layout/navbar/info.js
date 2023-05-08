@@ -5,6 +5,10 @@ export const menuItems = [
 		path: "/landing/home"
 	},
 	{
+		label: "About",
+		path: "/landing/about"
+	},
+	{
 		label: "Contact",
 		path: "/landing/contact"
 	},
@@ -15,6 +19,10 @@ export const drawerMenuItems = {
 		{
 			label: "Home",
 			path: "/landing/home"
+		},
+		{
+			label: "About",
+			path: "/landing/about"
 		},
 		{
 			label: "Contact",

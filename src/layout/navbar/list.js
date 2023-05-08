@@ -56,6 +56,18 @@ const SwipeableDrawerList = ({ mobileNav, setMobileNav }) => {
 					</ListItemButton>
 				</NavLink>
 				
+				<NavLink to="/landing/about" style={navlinkStyle}>
+					<ListItemButton
+						sx={{
+							minHeight: 48,
+							justifyContent: mobileNav ? 'initial' : 'center',
+							px: 2.5,
+						}}
+					>
+						<ListItemText primary="About" sx={{ opacity: mobileNav ? 1 : 0, marginLeft: "15px" }} />
+					</ListItemButton>
+				</NavLink>
+				
 				<NavLink to="/landing/contact" style={navlinkStyle}>
 					<ListItemButton
 						sx={{
