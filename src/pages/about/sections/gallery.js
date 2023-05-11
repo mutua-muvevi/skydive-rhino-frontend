@@ -117,9 +117,15 @@ const Gallery = () => {
 			<Container maxWidth="xl">
 				<Stack direction="column" spacing={3}>
 					<Grow style={{ transformOrigin: '10 20 50' }} in timeout={1000}>
-						<Typography variant="h2" color="primary">
-							Our Gallery
-						</Typography>
+						<Stack direction="column" spacing={1.5}>
+							<Typography variant="h2" color="primary">
+								Our Gallery
+							</Typography>
+
+							<Typography variant="h5" color="text.primary">
+								Capturing the Skydiving Spirit: Behold Our Stunning Photo Collection
+							</Typography>
+						</Stack>
 					</Grow>
 
 					
