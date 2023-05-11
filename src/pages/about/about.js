@@ -4,6 +4,7 @@ import Banner from "../../components/ui/banner";
 
 import WhyUs from "./sections/whyus";
 import AboutUs from "./sections/aboutus";
+import Gallery from "./sections/gallery";
 
 const StyledAbout = styled(Box)(({ theme }) => ({
 }))
@@ -20,6 +21,7 @@ const About = () => {
 			<Stack direction="column" spacing={3}>
 				<AboutUs/>
 				<WhyUs/>
+				<Gallery/>
 			</Stack>
 		</StyledAbout>
 	)
