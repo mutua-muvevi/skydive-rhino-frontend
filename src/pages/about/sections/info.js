@@ -69,3 +69,26 @@ export const whyUs = [
 		text: "If you're an experienced skydiver looking to take your skills to the next level, our jump school also offers advanced training programs. From wingsuit flying to competitive events, we have the expertise and resources to help you achieve your skydiving goals. Our experienced instructors will provide personalized coaching and guidance to help you advance your skills and achieve your full potential as a skydiver."
 	},
 ]
+
+export const gallery = [
+	{
+		image: "https://res.cloudinary.com/dqweh6zte/image/upload/v1679652035/skydive%20rhino/images/IMG_20230201_145259_013_posegl.jpg",
+		link: "https://www.instagram.com/p/CoHmlA9jWcR/"
+	},
+	{
+		image: "https://res.cloudinary.com/dqweh6zte/image/upload/v1679650180/skydive%20rhino/images/IMG_20230130_204134_103_gk9tek.jpg",
+		link: "https://www.instagram.com/p/CoDE4LsDtdx/"
+	},
+	{
+		image: "https://res.cloudinary.com/dqweh6zte/image/upload/v1679650180/skydive%20rhino/images/IMG_20230212_152758_768_qvvsg0.jpg",
+		link: "https://www.instagram.com/p/Coj_U3VsbBE/"
+	},
+	{
+		image: "https://res.cloudinary.com/dqweh6zte/image/upload/v1679652035/skydive%20rhino/images/IMG_20230213_124728_458_yvifs7.jpg",
+		link: "https://www.instagram.com/p/CoHTZLVD9y-/"
+	},
+	{
+		image: "https://res.cloudinary.com/dqweh6zte/image/upload/v1679749553/skydive%20rhino/images/IMG_20230126_072246_564_voxwjd.jpg",
+		link: "https://www.instagram.com/p/Cn3WSO3jdWL/"
+	},
+]
