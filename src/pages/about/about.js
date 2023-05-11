@@ -16,7 +16,7 @@ const About = () => {
 				height="50vh"
 				image="https://res.cloudinary.com/dqweh6zte/image/upload/v1673047336/skydive%20rhino/images/kamil-pietrzak-H22w-tq0SeQ-unsplash_cn6hbi.jpg"
 				title="About us"
-				subtile="Who we are"
+				text="Defy Gravity, Embrace Adventure: Welcome to the World of Skydiving!"
 			/>
 			<Stack direction="column" spacing={3}>
 				<AboutUs/>
