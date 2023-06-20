@@ -139,7 +139,7 @@ const Gallery = () => {
 												<CardMedia
 													component="img"
 													src={gal.image}
-													alt={`Gallery image ${index}`}
+													alt={`Gallery image ${index + 1}`}
 													height={350}
 												/>
 											</CardActionArea>
