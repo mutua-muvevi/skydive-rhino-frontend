@@ -12,10 +12,14 @@ import {
 	AppBar,
 	Toolbar,
 	Button,
+	CardActionArea,
 } from "@mui/material";
 import Slider from "react-slick";
 import { homeService } from "./info";
 import { styled } from "@mui/system";
+import { fetchSingleService } from "../../redux/service/action";
+import { connect } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const videoUrl =
 	"https://res.cloudinary.com/dqweh6zte/video/upload/v1673035911/skydive%20rhino/videos/pexels-leo-salom-7997309_tzgcig.mp4";
@@ -64,8 +68,10 @@ const StyledCard = styled(Card)(({ theme }) => ({
 
 const StyledCardContent = styled(CardContent)(({ theme }) => ({}));
 
-const Home = () => {
+const Home = ({ setService }) => {
 	const theme = useTheme();
+	const navigate = useNavigate();
+
 	const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
 	const isMediumScreen = useMediaQuery(theme.breakpoints.between("sm", "md"));
 	const isLargeScreen = useMediaQuery(theme.breakpoints.up("md"));
@@ -138,6 +144,11 @@ const Home = () => {
 		],
 	};
 
+	const serviceHandler = (service) => {
+		setService(service)
+		navigate("/service")
+	}
+
 	return (
 		<Box
 			sx={{
@@ -163,16 +174,21 @@ const Home = () => {
 							src={logo}
 							alt="skydiverhino logo"
 							style={{
-								height: "50px",
-								width: "50px",
+								height: "75px",
+								width: "100px",
 							}}
 						/>
 						<div>
-							<Button color="inherit" href="/landing/about">
-								About
+							<Button color="inherit" href="/landing/about" variant="outlined">
+								<Typography variant="h6" sx={{fontFamily: "'Merienda', cursive",}}>
+									About
+								</Typography>
 							</Button>
-							<Button color="inherit" href="/landing/contacts">
-								Contact
+
+							<Button color="inherit" href="/landing/contacts" variant="outlined">
+								<Typography variant="h6" sx={{fontFamily: "'Merienda', cursive",}}>
+									Contact
+								</Typography>
 							</Button>
 						</div>
 					</Container>
@@ -215,9 +231,9 @@ const Home = () => {
 						}}
 						spacing={3}
 					>
-						<Stack direction="column" spacing={1.5} px={5}>
-							<Typography variant="h1">Skydive Kenya</Typography>
-							<Typography variant="h5">
+						<Stack direction="column" spacing={1.5} pt={5} px={2}>
+							<Typography variant="h1" sx={{fontFamily: "'Merienda', cursive",}}>Skydive Rhino Kenya</Typography>
+							<Typography variant="h4" sx={{fontFamily: "'Merienda', cursive",}}>
 								Defy Gravity, Embrace Adventure: Welcome to the
 								World of Skydiving!
 							</Typography>
@@ -232,14 +248,16 @@ const Home = () => {
 											height: "180px",
 										}}
 									>
-										<StyledCardContent>
-											<Typography
-												variant="h2"
-												sx={{ color: "#ffffff" }}
-											>
-												{service.title}
-											</Typography>
-										</StyledCardContent>
+										<CardActionArea onClick={() => serviceHandler(service)}>
+											<StyledCardContent>
+												<Typography
+													variant="h2"
+													sx={{ color: "#ffffff", fontFamily: "'Merienda', cursive", }}
+												>
+													{service.title}
+												</Typography>
+											</StyledCardContent>
+										</CardActionArea>
 									</StyledCard>
 								</div>
 							))}
@@ -251,4 +269,12 @@ const Home = () => {
 	);
 };
 
-export default Home;
+const mapStateToProps = ({}) => ({
+
+})
+
+const mapDispatchToProps = (dispatch) => ({
+	setService: (service) => dispatch(fetchSingleService(service))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Home);

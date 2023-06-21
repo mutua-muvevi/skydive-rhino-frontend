@@ -8,6 +8,7 @@ import Book from "./pages/book/book";
 import LandingLayout from "./layout/layout";
 import About from "./pages/about/about";
 import Home from "./pages/homepage/homepage";
+import Service from "./pages/service/service";
 
 //router function
 const Router = () => {
@@ -37,6 +38,10 @@ const Router = () => {
 		{
 			path: "/book",
 			element: <Book/>
+		},
+		{
+			path: "/service",
+			element: <Service/>
 		},
 		
 		// {

@@ -19,7 +19,7 @@ function responsiveFontSizes({ sm, md, lg }) {
 }
 
 
-const FONT_PRIMARY = 'Monda';
+const FONT_PRIMARY = "'Source Sans Pro', sans-serif";
 
 const typography = {
   fontFamily: FONT_PRIMARY,
