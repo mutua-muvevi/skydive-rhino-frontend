@@ -7,18 +7,20 @@ import Contact from "./pages/contact/contact";
 import Book from "./pages/book/book";
 import LandingLayout from "./layout/layout";
 import About from "./pages/about/about";
+import Home from "./pages/homepage/homepage";
+import Service from "./pages/service/service";
 
 //router function
 const Router = () => {
 	return useRoutes([
 		{
+			path: "/",
+			element: <Home/>,
+		},
+		{
 			path: "/landing",
 			element: <LandingLayout/>,
 			children: [
-				{
-					path: "/landing/home",
-					element: <Homepage/>
-				},
 				{
 					path: "/landing/about",
 					element: <About/>
@@ -34,9 +36,10 @@ const Router = () => {
 			element: <Book/>
 		},
 		{
-			path: "/",
-			element: <Navigate to="/landing/home" replace />,
+			path: "/service",
+			element: <Service/>
 		},
+		
 		// {
 		// 	path: "*",
 		// 	element: <Navigate to="/404" replace/>

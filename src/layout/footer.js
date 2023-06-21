@@ -8,7 +8,7 @@ import { BsTelephoneFill } from "react-icons/bs";
 import { FaEnvelope, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
 import TextFieldWrapper from "../components/formui/textfield/textfield";
 
-const imageUrl = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679652035/skydive%20rhino/images/IMG_20230224_180023_967_h6orb9.jpg"
+const imageUrl = "https://res.cloudinary.com/dqweh6zte/image/upload/v1679653564/skydive%20rhino/images/pexels-pixabay-38447_yvzwe5.jpg"
 
 const StyledFooter = styled(Box)(({ theme }) => ({
 	minHeight: "60vh",
