@@ -22,10 +22,6 @@ const Router = () => {
 			element: <LandingLayout/>,
 			children: [
 				{
-					path: "/landing/home",
-					element: <Homepage/>
-				},
-				{
 					path: "/landing/about",
 					element: <About/>
 				},

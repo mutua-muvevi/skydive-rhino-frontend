@@ -4,8 +4,11 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 
 const StyledContainer = styled(Container)(({ theme }) => ({
-	backgroundColor: "rgba(0,0,0,0.6)",
-	padding:"10px",
+	backgroundColor: "rgba(0,0,0,0.65)",
+	paddingTop:"20px",
+	paddingBottom:"20px",
+	paddingRight:"10px",
+	paddingLeft:"10px",
 	color: "#fffffff",
 	position: 'absolute',
 	top: '50%',
@@ -31,6 +34,7 @@ const Service = ({service}) => {
 		height: "100vh",
 		backgroundImage: `url(${service.image})`,
 		backgroundSize: "cover",
+		backgroundPosition: "center",
 		position: "fixed"
 	}))
 
@@ -52,7 +56,7 @@ const Service = ({service}) => {
 
 					{
 						service && service.content && service.content.paragraph ? service.content.paragraph.map((par, i) => (
-							<Typography variant="subtitle1" sx={{color: "#ffffff"}} key={i}>
+							<Typography variant="h5" sx={{color: "#ffffff", fontWeight: "500"}} key={i} textAlign="justify">
 								{par}
 							</Typography>
 						)) : ""

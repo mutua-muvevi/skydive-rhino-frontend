@@ -2,7 +2,7 @@
 export const menuItems = [
 	{
 		label: "Home",
-		path: "/landing/home"
+		path: "/"
 	},
 	{
 		label: "About",
@@ -18,7 +18,7 @@ export const drawerMenuItems = {
 	top: [
 		{
 			label: "Home",
-			path: "/landing/home"
+			path: "/"
 		},
 		{
 			label: "About",
