@@ -44,7 +44,7 @@ const SwipeableDrawerList = ({ mobileNav, setMobileNav }) => {
 
 				<Divider color="grey"/>
 				
-				<NavLink to="/landing/home" style={navlinkStyle}>
+				<NavLink to="/" style={navlinkStyle}>
 					<ListItemButton
 						sx={{
 							minHeight: 48,
