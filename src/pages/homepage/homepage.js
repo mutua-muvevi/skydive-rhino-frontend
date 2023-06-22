@@ -197,7 +197,7 @@ const Home = ({ setService }) => {
 									</Typography>
 								</Button>
 
-								<Button color="inherit" href="/landing/contacts" variant="outlined">
+								<Button color="inherit" href="/landing/contact" variant="outlined">
 									<Typography variant="h6" sx={{fontFamily: "'Merienda', cursive",}}>
 										Contact
 									</Typography>
